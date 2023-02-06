@@ -1,1 +1,2 @@
-const API_KEY = process.env.RAPID_API_KEY;
+const API_KEY = "";
+export default API_KEY;
