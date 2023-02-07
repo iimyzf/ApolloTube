@@ -19,6 +19,7 @@ const SearchBar = () => {
 
     return (
         <Paper
+            className="form-bar"
             component="form"
             onSubmit={onhandleSubmit}
             sx={{

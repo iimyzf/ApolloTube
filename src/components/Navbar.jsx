@@ -1,9 +1,11 @@
-import { Stack } from "@mui/material";
+import { Stack, useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
-import { demoVideoUrl, logo } from "../constants";
-import { Loader, SearchBar } from "./";
+import { logo } from "../constants";
+import { SearchBar } from "./";
 
-const Navbar = ({ video }) => {
+const Navbar = () => {
+    const matches = useMediaQuery("(max-width:450px)");
+
     return (
         <Stack
             direction="row"
@@ -53,7 +55,7 @@ const Navbar = ({ video }) => {
                     Tube
                 </span>
             </Link>
-            <SearchBar />
+            {!matches && <SearchBar />}
         </Stack>
     );
 };
